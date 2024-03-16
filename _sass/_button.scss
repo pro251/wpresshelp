@@ -1,0 +1,41 @@
+.btn {
+  padding: 0.75em 1.5em;
+  font-size: 1em;
+  border-radius: 0.3em;
+  border: 2px solid transparent;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    outline: none;
+  }
+}
+
+.btn-primary {
+  background-color: $brand-primary;
+  color: $white;
+  border-color: $brand-primary;
+
+  &:hover,
+  &:focus {
+    background-color: darken($brand-primary, 10%);
+    border-color: darken($brand-primary, 10%);
+  }
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: $brand-primary;
+  border-color: $brand-primary;
+
+  &:hover,
+  &:focus {
+    background-color: $brand-primary;
+    color: #fff;
+  }
+}
