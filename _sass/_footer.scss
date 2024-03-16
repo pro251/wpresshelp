@@ -1,0 +1,13 @@
+footer {
+    background-color: $footer-bg;
+    color: $footer-color;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 0.9em;
+    a {
+        color: $footer-link-color;
+        &:hover {
+        color: $footer-link-hover-color;
+        }
+    }
+}

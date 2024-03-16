@@ -8,10 +8,23 @@ body {
 
 h1, h2, h3 {
   color: $black;
+  text-align: center;
   font-family: 'Raleway', Helvetica, Arial, sans-serif;
-  border-bottom: 1px solid $brand-primary;
+}
+
+h1 {
+  line-height: 2em;
+}
+
+h2 {
+  line-height: 3em;
+}
+
+h1, h2 {
+  border-bottom: 2px solid $brand-primary;
 }
 
 p {
   font-family: 'Raleway', Helvetica, Arial, sans-serif;
+  margin-top: 0;
 }
