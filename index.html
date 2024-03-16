@@ -1,6 +1,8 @@
 ---
 layout: homepage
 title: Wordpress Help | Website Help and Support
+meta_description: "Expert website and WordPress support from a seasoned developer with 15 years of experience.
+Elevate your business online with professional, personalized help."
 ---
 
 <div id="homepage-hero">
@@ -59,34 +61,3 @@ title: Wordpress Help | Website Help and Support
            rel="noopener noreferrer">Book Now</a>
     </div>
 </div>
-
-<script>
-    function supportsWebp(callback) {
-        var webP = new Image();
-        webP.onload = webP.onerror = function () {
-            callback(webP.height === 2);
-        };
-        webP.src = 'data:image/webp;base64,UklGRhIAAABXRUJQVlA4TAYAAAAvAAAA/AAA/wAAQUxQSAIAAAAADwAwAABAA//aAAA';
-    }
-
-    supportsWebp(function(supported) {
-        if (supported) {
-            document.getElementById('homepage-hero').style.backgroundImage = 'url(../assets/images/homepage-hero.webp)';
-        } else {
-            document.getElementById('homepage-hero').style.backgroundImage = 'url(../assets/images/homepage-hero.jpg)';
-        }
-    });
-</script>
-
-<script>
-    window.addEventListener('scroll', function() {
-        var scrollThreshold = 100;
-        var fixedContainer = document.getElementById('fixed-bottom-container');
-
-        if (window.pageYOffset > scrollThreshold) {
-            fixedContainer.classList.add('visible');
-        } else {
-            fixedContainer.classList.remove('visible');
-        }
-    });
-</script>

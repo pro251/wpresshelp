@@ -23,6 +23,9 @@ email: brad@wpresshelp.com
 description: >- # this means to ignore newlines until "baseurl:"
   Expert website and WordPress support from a seasoned developer with 15 years of experience. 
   Elevate your business online with professional, personalized help.
+meta_description: >- # this means to ignore newlines until "baseurl:"
+  Expert website and WordPress support from a seasoned developer with 15 years of experience. 
+  Elevate your business online with professional, personalized help.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://wrdpresshelp.com" # the base hostname & protocol for your site, e.g. http://example.com
 #twitter_username: ""
