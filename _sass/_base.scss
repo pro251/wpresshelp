@@ -1,0 +1,17 @@
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  padding: 0;
+  margin: 0;
+}
+
+h1, h2, h3 {
+  color: $black;
+  font-family: 'Raleway', Helvetica, Arial, sans-serif;
+  border-bottom: 1px solid $brand-primary;
+}
+
+p {
+  font-family: 'Raleway', Helvetica, Arial, sans-serif;
+}

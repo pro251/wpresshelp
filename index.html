@@ -1,0 +1,67 @@
+---
+layout: homepage
+title: Home
+---
+
+<div id="homepage-hero">
+    <h1>WordPress Help Available Now</h1>
+    <div class="content">
+        <p>Get responsive professional help with your WordPress website now. Never struggle with website updates, errors,
+            or design problems again. Register below to get the help you need.</p>
+    </div>
+</div>
+
+<div class="container dark">
+    <h2>Reliable WordPress Help</h2>
+    <p>Get reliable available WordPress help from a professional software developer. Stop struggling with keeping your company site updated. Our system keeps your site software up to date, backed up, and secured AND we’ll update any content you need with a simple call, text, or email.</p>
+</div>
+
+<div class="container feature">
+    <div class="icon-feature">
+        <img src="{{ 'assets/images/icon-us.png' | relative_url }}" alt="US Based Help">
+        <h3>US Based Help</h3>
+        <p>Easy to reach. Easy to communicate. Always one phone call or message away.</p>
+    </div>
+    <div class="icon-feature">
+        <img src="{{ 'assets/images/icon-one-time.png' | relative_url }}" alt="Site Updates">
+        <h3>Site Updates</h3>
+        <p>We keep your site up to date both software and content.</p>
+    </div>
+    <div class="icon-feature">
+        <img src="{{ 'assets/images/icon-open.png' | relative_url }}" alt="Unlimited Support">
+        <h3>Unlimited Support</h3>
+        <p>We’re committed to your site. For one monthly fee get access to unlimited world class help with your site.</p>
+    </div>
+</div>
+
+<div class="container dark">
+    <h2>Contact</h2>
+    <div class="contact-info">
+        <h3>Lead Developer</h3>
+        <p>
+            Brad Jones<br />
+            brad@wpresshelp.com<br />
+            (865)803-3581
+        </p>
+    </div>
+</div>
+
+<script>
+    // Function to test if the browser supports WebP format
+    function supportsWebp(callback) {
+        var webP = new Image();
+        webP.onload = webP.onerror = function () {
+            callback(webP.height === 2);
+        };
+        webP.src = 'data:image/webp;base64,UklGRhIAAABXRUJQVlA4TAYAAAAvAAAA/AAA/wAAQUxQSAIAAAAADwAwAABAA//aAAA';
+    }
+
+    // Use the function to set the background image
+    supportsWebp(function(supported) {
+        if (supported) {
+            document.getElementById('homepage-hero').style.backgroundImage = 'url(../assets/images/homepage-hero.webp)';
+        } else {
+            document.getElementById('homepage-hero').style.backgroundImage = 'url(../assets/images/homepage-hero.jpg)';
+        }
+    });
+</script>
