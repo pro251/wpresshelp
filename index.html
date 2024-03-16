@@ -8,7 +8,10 @@ title: Wordpress Help | Website Help and Support
     <div class="content">
         <p>Get responsive professional help with your WordPress website now. Never struggle with website updates, errors,
             or design problems again. Register below to get the help you need.</p>
-        <button class="btn btn-primary">Click Me</button>
+        <a href="https://calendly.com/wpresshelp/15min"
+           class="btn btn-primary"
+           target="_blank"
+           rel="noopener noreferrer">Book A Call Now</a>
     </div>
 </div>
 
@@ -44,10 +47,18 @@ title: Wordpress Help | Website Help and Support
             <h3>Lead Developer</h3>
             <p>Brad Jones<br>brad@wpresshelp.com<br>(865)803-3581</p>
         </div>
-        <!-- You can add more contact-info divs here -->
     </div>
 </div>
 
+<div class="fixed-bottom-container" id="fixed-bottom-container">
+    <div class="content">
+        Get Instant Help With Your WordPress Site – Book a Call Now!
+        <a href="https://calendly.com/wpresshelp/15min"
+           class="btn btn-primary"
+           target="_blank"
+           rel="noopener noreferrer">Book Now</a>
+    </div>
+</div>
 
 <script>
     function supportsWebp(callback) {
@@ -63,6 +74,19 @@ title: Wordpress Help | Website Help and Support
             document.getElementById('homepage-hero').style.backgroundImage = 'url(../assets/images/homepage-hero.webp)';
         } else {
             document.getElementById('homepage-hero').style.backgroundImage = 'url(../assets/images/homepage-hero.jpg)';
+        }
+    });
+</script>
+
+<script>
+    window.addEventListener('scroll', function() {
+        var scrollThreshold = 100;
+        var fixedContainer = document.getElementById('fixed-bottom-container');
+
+        if (window.pageYOffset > scrollThreshold) {
+            fixedContainer.classList.add('visible');
+        } else {
+            fixedContainer.classList.remove('visible');
         }
     });
 </script>
