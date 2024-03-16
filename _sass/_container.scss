@@ -1,44 +1,67 @@
-.container.feature {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  gap: 20px;
-}
+// Base container styles
+.container {
+  padding: 20px;
+  text-align: center;
 
-.icon-feature {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  margin: 20px;
-  width: 100%;
-  max-width: 250px;
-
-  img {
-    width: 100px;
-    height: 100px;
+  &.dark {
+    background-color: #f2f2f2;
   }
 
-  h3, p {
-    text-align: center;
-    margin: 10px 0;
+  // Heading style that applies to all containers
+  h2 {
+    margin-bottom: 20px; // Adds space between the heading and content
   }
-}
 
-.dark {
-  background-color: #f2f2f2;
+  // Styles for the feature container items
+  &.feature {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; // Provides spacing between items
+
+    .container-item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      margin: 20px;
+      flex: 1 1 200px; // Flex basis allows for responsive item width
+      max-width: 300px;
+
+      img {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 10px; // Spacing between image and text
+      }
+
+      h3, p {
+        margin: 10px 0;
+      }
+    }
+  }
+
+  // Styles for the container that includes the contact info
+  &.dark {
+    .container-heading, .container-content {
+      width: 100%;
+    }
+
+    // Specifically target the contact-info within the dark container
+    .contact-info {
+      // Override the flex basis for contact info on larger screens
+      @media (min-width: 768px) {
+        flex: 0 0 33.333%; // Takes up one third of the space
+        max-width: 33.333%;
+        &:not(:first-child) {
+          display: none; // Hides other contact-info divs if present
+        }
+      }
+    }
+  }
 }
 
 @media (min-width: 768px) {
-  .container.feature {
-    justify-content: center;
-  }
-
-  .icon-feature {
-    flex: 1 1 calc(33.333% - 20px);
-  }
-
   .container {
-    padding: 60px 20px;
+    padding: 60px 20px; // Increased padding for larger screens
   }
 }
