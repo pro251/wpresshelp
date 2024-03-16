@@ -47,7 +47,6 @@ title: Home
 </div>
 
 <script>
-    // Function to test if the browser supports WebP format
     function supportsWebp(callback) {
         var webP = new Image();
         webP.onload = webP.onerror = function () {
@@ -56,7 +55,6 @@ title: Home
         webP.src = 'data:image/webp;base64,UklGRhIAAABXRUJQVlA4TAYAAAAvAAAA/AAA/wAAQUxQSAIAAAAADwAwAABAA//aAAA';
     }
 
-    // Use the function to set the background image
     supportsWebp(function(supported) {
         if (supported) {
             document.getElementById('homepage-hero').style.backgroundImage = 'url(../assets/images/homepage-hero.webp)';
