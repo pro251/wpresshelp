@@ -7,17 +7,15 @@
     background-color: #f2f2f2;
   }
 
-  // Heading style that applies to all containers
   h2 {
-    margin-bottom: 20px; // Adds space between the heading and content
+    margin-bottom: 10px;
   }
 
-  // Styles for the feature container items
   &.feature {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px; // Provides spacing between items
+    gap: 20px;
 
     .container-item {
       display: flex;
@@ -25,13 +23,13 @@
       align-items: center;
       flex-direction: column;
       margin: 20px;
-      flex: 1 1 200px; // Flex basis allows for responsive item width
+      flex: 1 1 200px;
       max-width: 300px;
 
       img {
         width: 100px;
         height: 100px;
-        margin-bottom: 10px; // Spacing between image and text
+        margin-bottom: 10px;
       }
 
       h3, p {
@@ -40,20 +38,17 @@
     }
   }
 
-  // Styles for the container that includes the contact info
   &.dark {
     .container-heading, .container-content {
       width: 100%;
     }
 
-    // Specifically target the contact-info within the dark container
     .contact-info {
-      // Override the flex basis for contact info on larger screens
       @media (min-width: 768px) {
-        flex: 0 0 33.333%; // Takes up one third of the space
+        flex: 0 0 33.333%;
         max-width: 33.333%;
         &:not(:first-child) {
-          display: none; // Hides other contact-info divs if present
+          display: none;
         }
       }
     }
@@ -62,6 +57,6 @@
 
 @media (min-width: 768px) {
   .container {
-    padding: 60px 20px; // Increased padding for larger screens
+    padding: 60px 20px;
   }
 }
