@@ -1,0 +1,48 @@
+---
+layout: basepage
+title: Wordpress Help | Call Booked
+meta_description: "Call booked"
+test_url: "/booked?assigned_to=Brad%20Jones&event_type_uuid=e8c61227-61b8-4641-8096-9e9b1b33690d&event_type_name=15%20Minute%20Call&event_start_time=2024-03-17T14%3A00%3A00-04%3A00&event_end_time=2024-03-17T14%3A15%3A00-04%3A00&invitee_uuid=dfda2185-d5e1-48eb-8acc-cd5e82657c7d&invitee_full_name=Test3%20Name&invitee_email=bradj251%40gmail.com&answer_1=www.google.com"
+---
+<h1><span id="event_type_name"></span> Booked</h1>
+<div class="flex">
+    <div class="w-3-4 p2">
+        <p>Thank you for booking a call with me. I look forward to speaking with you.</p>
+        <p>You'll be meeting <span id="assigned_to"></span> at <span id="event_start_time"></span></p>
+        <p>If you need more urgent assistance you can call or text (865)803-3581 or email brad@wpresshelp.com</p>
+    </div>
+    <div class="w-1-4 p2">
+        <img src="{{ 'assets/images/bookingpage-avatar.png' | relative_url }}" alt="Booking avatar">
+    </div>
+
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const eventTypeName = urlParams.get('event_type_name');
+        const assignedTo = urlParams.get('assigned_to');
+        const startTime = urlParams.get('event_start_time');
+        const inviteeUUID = urlParams.get('invitee_uuid');
+        const answer1 = decodeURIComponent(urlParams.get('answer_1'));
+
+        // Format the date and time from ISO8601 to a more readable format
+        const formattedStartTime = new Date(startTime).toLocaleString('en-US', {
+            weekday: 'long', // "Monday"
+            year: 'numeric', // "2024"
+            month: 'long', // "March"
+            day: 'numeric', // "17"
+            hour: 'numeric', // "2"
+            minute: '2-digit', // "00"
+            timeZoneName: 'short' // "PDT"
+        });
+
+        // Insert the values into the HTML
+        document.getElementById('assigned_to').textContent = assignedTo;
+        document.getElementById('event_type_name').textContent = eventTypeName;
+        document.getElementById('event_start_time').textContent = formattedStartTime;
+        document.getElementById('invitee_uuid').textContent = inviteeUUID;
+        document.getElementById('answer_1').textContent = answer1;
+    });
+</script>
+
